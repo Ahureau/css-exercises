@@ -89,3 +89,76 @@
   font-size: 13px;
   font-weight: normal;
 }
+
+
+/* Solving attempt */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 8rem 5rem 1fr 5rem;
+  gap: 4px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-area: 1 / 1 / 2 / -1;
+}
+
+.logo {
+  display: grid;
+  align-items: center;
+}
+
+.menu {
+  display: grid;
+  justify-content: right;
+}
+
+.menu ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(min-content, 200px));
+  align-items: center;
+}
+
+.menu li {
+  display: grid;
+  width: 100%;
+}
+
+.nav {
+  grid-area: 2 / 2 / 3 / 3;
+  display: grid;
+}
+
+.nav ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+.article {
+  grid-area: 3 / 2 / 4 / 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.article .card {
+  height: 200px;
+}
+
+.sidebar {
+  grid-area: 2 / 1 / -2 / 2;
+  display: grid;
+  gap: 50px;
+}
+
+.footer {
+  grid-area: -2 / 1 / -1 / -1;
+  display: grid;
+  align-items: center;
+}
